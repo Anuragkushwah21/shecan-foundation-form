@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
-import { API_URL } from './config' 
+import { API_URL } from '../config' 
 const AuthContext = createContext(null)
 
 export const AuthProvider = ({ children }) => {

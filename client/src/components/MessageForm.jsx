@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { useAuth } from '../context/AuthContext'
-import { API_BASE_URL } from './config'
+import { API_BASE_URL } from '../config'
 
 const initialState = {
   name: '',

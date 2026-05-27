@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { useAuth } from '../context/AuthContext'
-import { API_URL } from './config' 
+import { API_URL } from '../config' 
 
 const DashboardPage = () => {
   const { token, user } = useAuth()
