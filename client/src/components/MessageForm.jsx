@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { useAuth } from '../context/AuthContext'
-import { API_BASE_URL } from '../config'
+import { API_URL } from '../config'
 
 const initialState = {
   name: '',
@@ -57,7 +57,7 @@ const MessageForm = () => {
 
       const res = await toast.promise(
         axios.post(
-          `${API_BASE_URL}/message`,
+          `${API_URL}/message`,
           {
             name: formData.name,
             email: formData.email,
