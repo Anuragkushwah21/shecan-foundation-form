@@ -3,11 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { useAuth } from '../context/AuthContext'
-
-// TODO: prod me config se lo
-// const API_URL = 'http://localhost:4001/api'
-
-const API_URL="https://shecan-foundation-form-1.onrender.com/api"
+import { API_URL } from './config' 
 
 const DashboardPage = () => {
   const { token, user } = useAuth()

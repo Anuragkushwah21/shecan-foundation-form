@@ -16,12 +16,18 @@ app.use(cookieParser())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors(
-  {
-    origin: "https://shecan-foundation-form-five.vercel.app/",
-    credentials:true,
-  }
-));
+const allowedOrigins = [
+  'http://localhost:5173',
+  process.env.CLIENT_ORIGIN,
+]
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+)
 
 
 app.get('/api/health', (req, res) => {
