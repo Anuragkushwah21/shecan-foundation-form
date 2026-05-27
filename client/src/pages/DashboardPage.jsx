@@ -5,7 +5,9 @@ import { toast } from 'react-toastify'
 import { useAuth } from '../context/AuthContext'
 
 // TODO: prod me config se lo
-const API_URL = 'http://localhost:4001/api'
+// const API_URL = 'http://localhost:4001/api'
+
+const API_URL="https://shecan-foundation-form-1.onrender.com/api"
 
 const DashboardPage = () => {
   const { token, user } = useAuth()
